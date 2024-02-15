@@ -1,4 +1,21 @@
 
+function checkButtonKeypress(event){
+    const gamerpressed = event.key;
+    // console.log(event.key);
+    const displayAlphabetText = getElementByIdName('display-alphabet').innerText;
+    const showAlphabet = displayAlphabetText.toLowerCase();
+    // console.log(gamerpressed, showAlphabet);
+    if(gamerpressed === showAlphabet){
+        console.log('You got a point!');
+    }
+    else{
+        console.log('You lost your life...!');
+    }
+
+
+}
+document.addEventListener('keyup', checkButtonKeypress);
+
 function continueGame(){
     const alphabet = getRandomAlphabet();
     const displayAlphabet = getElementByIdName('display-alphabet');
