@@ -1,15 +1,18 @@
 
 function checkButtonKeypress(event){
-    const gamerpressed = event.key;
+    const gamerPressed = event.key;
     // console.log(event.key);
     const displayAlphabetText = getElementByIdName('display-alphabet').innerText;
     const showAlphabet = displayAlphabetText.toLowerCase();
     // console.log(gamerpressed, showAlphabet);
-    if(gamerpressed === showAlphabet){
+    if(gamerPressed === showAlphabet){
         console.log('You got a point!');
+        removeBgColorById(showAlphabet);
+        continueGame();
     }
     else{
         console.log('You lost your life...!');
+        // alert('You Pressed wrong key.')
     }
 
 
