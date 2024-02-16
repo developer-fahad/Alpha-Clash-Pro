@@ -10,20 +10,19 @@ function getElementByIdName(elementId){
 //     element.classList.add('hidden');
 // }
 
-    function showElementById(elementId){
-        const element = getElementByIdName('playground');
-        element.classList.remove('hidden');
-    }
-
 // function showElementById(elementId){
-//     const element = getElementByIdName(elementId);
-//     const showElement = element.classList.remove('hidden');
-//     return showElement;
+//     const element = getElementByIdName('playground');
+//     element.classList.remove('hidden');
 // }
 
-function hideElementByID(){
-    // const element = document.getElementById(elementID);
-    const element = getElementByIdName('home-screen');
+function showElementById(elementId){
+    const element = getElementByIdName(elementId);
+    const showElement = element.classList.remove('hidden');
+    return showElement;
+}
+
+function hideElementByID(elementId){
+    const element = document.getElementById(elementId);
     element.classList.add('hidden');
 }
 
@@ -46,4 +45,21 @@ function getRandomAlphabet(){
     const alphabet = alphabests[index];
     console.log(alphabet);
     return alphabet;
+}
+
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
+}
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const elementText = element.innerText;
+    const elementValue = parseInt(elementText);
+    return elementValue;
+}
+
+function setTextElementValueById(elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
 }

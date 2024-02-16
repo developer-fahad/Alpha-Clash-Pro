@@ -18,7 +18,7 @@
                 <button onclick="play()" class="btn bg-white font-poppins text-black">Play Now</button>
             </div>
         </section>
-        <section id="playground" class=" hidden">
+        <section id="playground" class="hidden">
             <div class="w-[1024px] min-h-screen flex flex-col m-auto items-center justify-center   gap-8">
                 <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB3]">
                     <div class="flex justify-center  ">
@@ -68,21 +68,21 @@
                     <button onclick="changeBg()" id="life-btn" class="btn text-white border-0 rounded-full bg-pink-800 hover:bg-pink-900">
                         Life
                         <img src="images/Group 23.svg" alt="">
-                        1
+                        <span id="total-life">5</span>
                       </button>
                     <button class="btn text-white border-0 rounded-full bg-violet-800 hover:bg-violet-900">
                         Score
                         <img src="images/monetization_on.svg" alt="">
-                        1
+                        <span id="current-score">0</span>
                       </button>
                 </div>
             </div>
         </section>
-        <section class="score hidden">
+        <section id="score" class=" hidden">
             <div class=" min-h-screen  p-12 flex items-center justify-center border-6 border-red-800">
                 <div class="w-[400px] h-[300px] flex flex-col items-center justify-center text-white bg-purple-700 rounded-2xl">
-                    <h1 class="mb-4 text-7xl font-poppins"> <span class="text-7xl font-bold">Score: </span>13</h1>
-                    <button class="btn mb-4 rounded-full font-poppins">Play Again</button>
+                    <h1 class="mb-4 text-7xl font-poppins"> <span class="text-7xl font-bold">Score: </span><span id="final-score">13</span></h1>
+                    <button onclick="play()" class="btn mb-4 rounded-full font-poppins">Play Again</button>
                     <p class="mb-4 font-poppins text-lg">Practice will make you a Pro</p>
                 </div>
             </div>
